@@ -1,0 +1,298 @@
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(0, 0, 0);
+  margin: 0;
+}
+
+
+.doc {
+  width: 62em;
+  margin: auto;
+}
+
+.inner {
+  background: #F3F3F3;
+  padding: 10px 80px;
+  margin: 80px auto;
+  border-top: solid rgb(90, 90, 90);
+  border-top-width: 0.6em;
+}
+
+#s1 {
+  margin: 2em 0 2em 0;
+  border-bottom: solid rgb(161, 158, 158);
+  border-width: 0.03em;
+  padding-bottom: 1.5em;
+  
+}
+
+#s1::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.name-contact-section {
+}
+
+.name-position {
+  text-transform: uppercase;
+  letter-spacing: 4.5px;
+  float: left;
+}
+
+.contact-info {
+  float: right;
+}
+
+#title {
+  font-style: italic;
+  font-size: 1.25em;
+}
+
+.s2 {
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  border-bottom: solid rgb(161, 158, 158);
+  border-width: 0.03em;
+  padding-right: -3em;
+} 
+
+.body-s2 {
+ float: right;
+}
+
+.s2::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.sect-head {
+  font-style: italic;
+  width: 20%;
+  padding-bottom: .4em;
+  margin-bottom: 1em;
+  border-bottom: solid rgb(161, 158, 158);
+  border-width: 0.03em;
+  float: left;
+}
+
+.cert-head {
+  
+}
+
+
+.certs {
+  width: 29%;
+  float: left;
+  padding-right: 2.2em;
+}
+
+#lpi {
+ padding: 0;
+}
+
+#axelos {
+  padding-left: 2.3em;
+  padding-bottom: 2.5em;
+}
+
+#aws {
+  float: ;
+}
+
+.s3 {
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  border-bottom: solid rgb(161, 158, 158);
+  border-width: 0.03em;
+}
+
+.s3::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.body-s3::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.schools::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.edu-head {
+  width: 15%;
+}
+
+.school {
+  float: left;
+  text-align: left;
+  padding-right: ;
+}
+
+.wgu {
+  clear: both;
+  width: 25%;
+  padding-right: 4.2em;
+}
+
+.wgua {
+  width: 25%;
+  padding-right: 4.4em;
+}
+
+.fchs {
+  width: 25%;
+}
+
+.s4 {
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  border-bottom: solid rgb(161, 158, 158);
+  border-width: 0.03em;
+}
+
+.s4::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.tech-head {
+  width: 8%;
+}
+
+.skills {
+  float: right;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.skill-item {
+  line-height: 24px;
+  list-style: none;
+  border-bottom: solid rgb(161, 158, 158);
+  border-width: 0.03em;
+  width: 13.8em;
+}
+
+.s45 {
+  padding-bottom: 1.5em;
+  margin-bottom: 2em;
+  border-bottom: solid rgb(161, 158, 158);
+  border-width: 0.03em;
+} 
+
+.project-head {
+  width: 10%;
+  margin-right: 5em;
+}
+
+.cloud-resume-challenge {
+  position: relative;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  display: inline-block;
+  width: 80%;
+  border-bottom: solid rgb(161, 158, 158);
+  border-width: 0.03em;
+}
+
+.s5 {
+  padding-bottom: 1.5em;
+  margin-bottom: 3em;
+  border-bottom: solid rgb(161, 158, 158);
+  border-width: 0.03em;
+}
+
+.s5:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.empl-head {
+  width: 16%;
+  margin-right: 2em;
+}
+
+.job {
+  position: relative;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  display: inline-block;
+  width: 80%;
+  border-bottom: solid rgb(161, 158, 158);
+  border-width: 0.03em;
+}
+
+.job {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footer {
+  padding: 1em 0 5em 0;
+  font-size: 92%;
+  border-top: solid rgb(161, 158, 158);
+  border-width: 0.03em;
+  text-align: center;
+}
+
+a {
+  color: rgb(12, 12, 150);
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0px;
+  color: rgb(20, 20, 20);
+}
+
+h2 {
+  font-size: 1.25em;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
