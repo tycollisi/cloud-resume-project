@@ -4,5 +4,11 @@ variable "aws_region" {
 }
 
 variable "cli_profile" {
-  description = "Deployment Credentials"
+  description = "Deployment Credentials / Run Environment"
+  default     = "tcollisi"
+}
+
+variable "environment" {
+  description = "Environment"
+  default     = "prod"
 }
