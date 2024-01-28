@@ -33,6 +33,7 @@ module "cloud_resume" {
   acm_certificate_arn    = data.aws_acm_certificate.cloud_resume.arn
   zone_id                = data.aws_route53_zone.cloud_resume.zone_id
   record_name            = "*.tylers-resume.com"
+  apex_record_name       = "tylers-resume.com"
 }
 
 data "aws_acm_certificate" "cloud_resume" {

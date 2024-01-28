@@ -34,3 +34,8 @@ variable "record_name" {
   description = "Route53 Record Name"
   type = string
 }
+
+variable "apex_record_name" {
+  description = "Apex Route53 Record Name"
+  type = string
+}
