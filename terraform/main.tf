@@ -29,16 +29,24 @@ module "cloud_resume" {
   acm_certificate_arn    = data.aws_acm_certificate.cloud_resume.arn
   zone_id                = data.aws_route53_zone.cloud_resume.zone_id
   record_name            = "*.tylers-resume.com"
-  apex_record_name       = "tylers-resume.com"
+  #apex_record_name       = "tylers-resume.com"
 }
 
 module "s3_object_upload" {
   source = "../modules/s3_object_upload"
   bucket = "collisi-cloud-resume"
-  files = {
-    "index.html" = "../website/index.html"
-    "resume.css" = "../website/resume.css"
+  files = [
+  {
+    key          = "index.html"
+    source       = "../website/index.html"
+    content_type = "text/html"
+  },
+  {
+    key          = "resume.css"
+    source       = "../website/resume.css"
+    content_type = "text/css"
   }
+]
 
   depends_on = [ module.cloud_resume ]
 }

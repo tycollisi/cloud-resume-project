@@ -17,7 +17,7 @@ variable "record_name" {
   type = string
 }
 
-variable "apex_record_name" {
-  description = "Apex Route53 Record Name"
-  type = string
-}
+#variable "apex_record_name" {
+#  description = "Apex Route53 Record Name"
+#  type = string
+#}

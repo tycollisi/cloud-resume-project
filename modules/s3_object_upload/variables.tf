@@ -4,5 +4,11 @@ variable "bucket" {
 }
 
 variable "files" {
-  type = map(string)
+  description = "A list of maps, each containing the key, source, and content_type of an S3 object."
+  type = list(object({
+    key          = string
+    source       = string
+    content_type = string
+  }))
 }
+

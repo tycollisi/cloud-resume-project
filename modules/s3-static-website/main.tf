@@ -75,17 +75,17 @@ resource "aws_route53_record" "cloud_resume" {
   }
 }
 
-resource "aws_route53_record" "cloud_resume_apex" {
-  zone_id = var.zone_id
-  name    = var.apex_record_name 
-  type    = "A"
-
-  alias {
-    name                   = aws_cloudfront_distribution.cloud_resume.domain_name
-    zone_id                = aws_cloudfront_distribution.cloud_resume.hosted_zone_id
-    evaluate_target_health = true
-  }
-}
+#resource "aws_route53_record" "cloud_resume_apex" {
+#  zone_id = var.zone_id
+#  name    = var.apex_record_name 
+#  type    = "A"
+#
+#  alias {
+#    name                   = aws_cloudfront_distribution.cloud_resume.domain_name
+#    zone_id                = aws_cloudfront_distribution.cloud_resume.hosted_zone_id
+#    evaluate_target_health = true
+#  }
+#}
 
 
 locals {
@@ -102,7 +102,7 @@ resource "aws_cloudfront_distribution" "cloud_resume" {
   enabled             = true
   default_root_object = "index.html"
 
-  aliases = [ var.record_name, var.apex_record_name ]
+  aliases = [ var.record_name ]//, var.apex_record_name ]
 
   default_cache_behavior {
     #cache_policy_id        = "4135ea2d-6df8-44a3-9df3-4b5a84be39ad"
