@@ -62,28 +62,6 @@ resource "aws_s3_bucket_website_configuration" "cloud-resume" {
   #}
 }
 
-resource "aws_s3_object" "index_html" {
-  bucket = var.bucket_name
-  key    = var.index_html_s3_key
-  source = var.index_html_source_path
-
-  etag = filemd5(var.index_html_source_path)
-
-  content_type = "text/html"
-
-  depends_on = [ aws_s3_bucket.cloud_resume ]
-}
-
-resource "aws_s3_object" "css" {
-  bucket = var.bucket_name
-  key    = var.resume_css_s3_key
-  source = var.resume_css_source_path
-
-  etag = filemd5(var.resume_css_source_path)
-
-  depends_on = [ aws_s3_bucket.cloud_resume ]
-}
-
 resource "aws_route53_record" "cloud_resume" {
   zone_id = var.zone_id
   name    = var.record_name

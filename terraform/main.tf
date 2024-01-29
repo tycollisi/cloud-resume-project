@@ -26,14 +26,21 @@ terraform {
 module "cloud_resume" {
   source                 = "../modules/s3-static-website"
   bucket_name            = "collisi-cloud-resume"
-  index_html_s3_key      = "index.html"
-  index_html_source_path = "../website/index.html"
-  resume_css_s3_key      = "resume.css"
-  resume_css_source_path = "../website/resume.css"
   acm_certificate_arn    = data.aws_acm_certificate.cloud_resume.arn
   zone_id                = data.aws_route53_zone.cloud_resume.zone_id
   record_name            = "*.tylers-resume.com"
   apex_record_name       = "tylers-resume.com"
+}
+
+module "s3_object_upload" {
+  source = "../modules/s3_object_upload"
+  bucket = "collisi-cloud-resume"
+  files = {
+    "index.html" = "../website/index.html"
+    "resume.css" = "../website/resume.css"
+  }
+
+  depends_on = [ module.cloud_resume ]
 }
 
 data "aws_acm_certificate" "cloud_resume" {

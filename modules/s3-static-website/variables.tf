@@ -3,24 +3,6 @@ variable "bucket_name" {
   #default = "collisi-cloud-resume"
 }
 
-variable "index_html_s3_key" {
-  description = "Name of the object once it is in the bucket"
-  type        = string
-}
-
-variable "index_html_source_path" {
-  type = string
-}
-
-variable "resume_css_s3_key" {
-  description = "Name of the object once it is in the bucket"
-  type        = string
-}
-
-variable "resume_css_source_path" {
-  type = string
-}
-
 variable "acm_certificate_arn" {
   type = string
 }
