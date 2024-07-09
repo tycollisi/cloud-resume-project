@@ -7,7 +7,7 @@ resource "aws_s3_object" "object" {
 
   bucket = data.aws_s3_bucket.bucket.id
   key = each.value.key
-  source = each.value.source
-  etag = filemd5(each.value.source)
-  content_type = each.value.content_type
+  source = try(each.value.source, null)
+  etag = each.value.source != null ? filemd5(each.value.source) : null
+  content_type = try(each.value.content_type, null)
 }
